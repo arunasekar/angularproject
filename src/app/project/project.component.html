@@ -1,0 +1,24 @@
+<h2>STUDENT DETAILS</h2>
+
+<ul class="test">
+  <li *ngFor="let proj of test"
+    [class.selected]="proj === selectedPro"
+    (click)="onSelect(proj)">
+    
+    <span class="name"></span> {{proj.name}}
+  </li>
+</ul>
+
+
+ <div *ngIf="selectedPro">
+
+  <h2>{{selectedPro.name | uppercase}} DETAILS</h2>
+  <div><span>id: </span>{{selectedPro.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedPro.name" placeholder="name">
+    </label>
+  </div>
+  <div><span>marks: </span>{{selectedPro.marks}}</div>
+  <div><span>Rank: </span>{{selectedPro.Rank}}</div>
+</div>     

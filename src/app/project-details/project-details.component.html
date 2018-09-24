@@ -1,0 +1,14 @@
+ <div *ngIf="proj">
+
+    <h2>{{proj.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{proj.id}}</div>
+    <div>
+      name:
+        <input [(ngModel)]="proj.name" placeholder="name">
+      
+    </div>
+    <div><span>marks: </span>{{proj.marks}}</div>
+    <div><span>Rank: </span>{{proj.Rank}}</div>
+  
+  </div>  
+  
